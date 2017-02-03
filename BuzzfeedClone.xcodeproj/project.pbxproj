@@ -15,6 +15,8 @@
 		7A81DF2F1E452A9500BD3B40 /* BuzzfeedCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81DF2E1E452A9500BD3B40 /* BuzzfeedCloneTests.swift */; };
 		7A81DF3A1E452A9500BD3B40 /* BuzzfeedCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81DF391E452A9500BD3B40 /* BuzzfeedCloneUITests.swift */; };
 		7A81DF481E452BC700BD3B40 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81DF471E452BC700BD3B40 /* ArticleDetailViewController.swift */; };
+		7A81DF4A1E452F6700BD3B40 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81DF491E452F6700BD3B40 /* Article.swift */; };
+		7A81DF4C1E4531FB00BD3B40 /* MyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A81DF4B1E4531FB00BD3B40 /* MyList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7A81DF391E452A9500BD3B40 /* BuzzfeedCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzfeedCloneUITests.swift; sourceTree = "<group>"; };
 		7A81DF3B1E452A9500BD3B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A81DF471E452BC700BD3B40 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		7A81DF491E452F6700BD3B40 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		7A81DF4B1E4531FB00BD3B40 /* MyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				7A81DF191E452A9500BD3B40 /* AppDelegate.swift */,
 				7A81DF1B1E452A9500BD3B40 /* ArticleCollectionViewController.swift */,
 				7A81DF471E452BC700BD3B40 /* ArticleDetailViewController.swift */,
+				7A81DF491E452F6700BD3B40 /* Article.swift */,
+				7A81DF4B1E4531FB00BD3B40 /* MyList.plist */,
 				7A81DF1D1E452A9500BD3B40 /* Main.storyboard */,
 				7A81DF201E452A9500BD3B40 /* Assets.xcassets */,
 				7A81DF221E452A9500BD3B40 /* LaunchScreen.storyboard */,
@@ -236,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81DF4C1E4531FB00BD3B40 /* MyList.plist in Resources */,
 				7A81DF241E452A9500BD3B40 /* LaunchScreen.storyboard in Resources */,
 				7A81DF211E452A9500BD3B40 /* Assets.xcassets in Resources */,
 				7A81DF1F1E452A9500BD3B40 /* Main.storyboard in Resources */,
@@ -263,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81DF4A1E452F6700BD3B40 /* Article.swift in Sources */,
 				7A81DF1C1E452A9500BD3B40 /* ArticleCollectionViewController.swift in Sources */,
 				7A81DF1A1E452A9500BD3B40 /* AppDelegate.swift in Sources */,
 				7A81DF481E452BC700BD3B40 /* ArticleDetailViewController.swift in Sources */,
