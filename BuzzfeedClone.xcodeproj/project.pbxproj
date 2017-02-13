@@ -17,6 +17,7 @@
 		7A81DF481E452BC700BD3B40 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81DF471E452BC700BD3B40 /* ArticleDetailViewController.swift */; };
 		7A81DF4A1E452F6700BD3B40 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81DF491E452F6700BD3B40 /* Article.swift */; };
 		7A81DF4C1E4531FB00BD3B40 /* MyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A81DF4B1E4531FB00BD3B40 /* MyList.plist */; };
+		7AA2C8751E4E5EAD008A49EF /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2C8741E4E5EAD008A49EF /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7A81DF471E452BC700BD3B40 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		7A81DF491E452F6700BD3B40 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		7A81DF4B1E4531FB00BD3B40 /* MyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyList.plist; sourceTree = "<group>"; };
+		7AA2C8741E4E5EAD008A49EF /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				7A81DF1B1E452A9500BD3B40 /* ArticleCollectionViewController.swift */,
 				7A81DF471E452BC700BD3B40 /* ArticleDetailViewController.swift */,
 				7A81DF491E452F6700BD3B40 /* Article.swift */,
+				7AA2C8741E4E5EAD008A49EF /* ArticleCell.swift */,
 				7A81DF4B1E4531FB00BD3B40 /* MyList.plist */,
 				7A81DF1D1E452A9500BD3B40 /* Main.storyboard */,
 				7A81DF201E452A9500BD3B40 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				7A81DF4A1E452F6700BD3B40 /* Article.swift in Sources */,
 				7A81DF1C1E452A9500BD3B40 /* ArticleCollectionViewController.swift in Sources */,
 				7A81DF1A1E452A9500BD3B40 /* AppDelegate.swift in Sources */,
+				7AA2C8751E4E5EAD008A49EF /* ArticleCell.swift in Sources */,
 				7A81DF481E452BC700BD3B40 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2D36RY7798;
 				INFOPLIST_FILE = BuzzfeedClone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buzzfeedclone.BuzzfeedClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,6 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2D36RY7798;
 				INFOPLIST_FILE = BuzzfeedClone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buzzfeedclone.BuzzfeedClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +524,7 @@
 				7A81DF401E452A9500BD3B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A81DF411E452A9500BD3B40 /* Build configuration list for PBXNativeTarget "BuzzfeedCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +533,7 @@
 				7A81DF431E452A9500BD3B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A81DF441E452A9500BD3B40 /* Build configuration list for PBXNativeTarget "BuzzfeedCloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +542,7 @@
 				7A81DF461E452A9500BD3B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

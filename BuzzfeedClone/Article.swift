@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct Article {
   var author: String
@@ -6,6 +7,7 @@ struct Article {
   var url: String
   var urlToImage: String
   var publishedAt: String
+  static var articlesArray: [Article] = []
   
   init?(json: [String: Any]) {
     guard let author = json["author"] as? String, let title = json["title"], let url = json["url"], let urlToImage = json["urlToImage"], let publishedAt = json["publishedAt"] else { return nil }
@@ -15,7 +17,17 @@ struct Article {
     self.urlToImage = urlToImage as! String
     self.publishedAt = publishedAt as! String
   }
-  
+
+  static func convertToImage(urlToImage: String) -> UIImage {
+    let imageURL = UIImageView()
+    let url = URL(string: urlToImage)
+    let data = NSData(contentsOf:url!)
+    if data != nil {
+      imageURL.image = UIImage(data:data! as Data)
+    }
+    return imageURL.image!
+  }
+
   static func fetchApiKey() -> String {
     var keys:NSDictionary?
     if let path = Bundle.main.path(forResource: "MyList", ofType: "plist") {
@@ -24,18 +36,14 @@ struct Article {
     guard let dict = keys, let key = dict["buzzfeedApiKey"] as? String else { return "" }
     return key
   }
-
-  static func fetchArticles() {
-    let url = NSURL(string:"https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=\(fetchApiKey())")
-    URLSession.shared.dataTask(with: url! as URL) { data, response, error in
-      let httpResponse = response as? HTTPURLResponse
-      if httpResponse?.statusCode == 200 && data != nil {
-        
-        var json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-        print(json)
-      }
-    }.resume()
+  
+  static func fromJson(json: [String: Any]) -> [Article] {
+    guard let articleObject = json["articles"] as? [[String: Any]] else { return [] }
+    var articles: [Article] = []
+    for articleNode in articleObject {
+      guard let article = Article(json: articleNode) else { continue }
+      articles.append(article)
+    }
+    return articles
   }
 }
-
-  
