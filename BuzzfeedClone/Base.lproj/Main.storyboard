@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="avQ-Rf-mUe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Je-Fu-irs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,13 +25,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="114"/>
+            <point key="canvasLocation" x="1944.8" y="113.79310344827587"/>
         </scene>
-        <!--Article Collection View Controller-->
+        <!--Top Articles-->
         <scene sceneID="w3n-9I-u7U">
             <objects>
-                <collectionViewController id="avQ-Rf-mUe" customClass="ArticleCollectionViewController" customModule="BuzzfeedClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sLJ-8W-aiz">
+                <collectionViewController id="avQ-Rf-mUe" customClass="TopArticlesCollectionViewController" customModule="BuzzfeedClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="sLJ-8W-aiz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,7 +42,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="gPi-yX-Vc4" customClass="ArticleCell" customModule="BuzzfeedClone" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopArticleCell" id="gPi-yX-Vc4" customClass="TopArticleCell" customModule="BuzzfeedClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="176" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -71,10 +71,78 @@
                             <outlet property="delegate" destination="avQ-Rf-mUe" id="M6P-5T-nBb"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Top Articles" id="kyo-YP-OpP"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cc-cO-RWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269.60000000000002" y="113.79310344827587"/>
+            <point key="canvasLocation" x="1208.8" y="113.79310344827587"/>
+        </scene>
+        <!--Latest Articles-->
+        <scene sceneID="OHH-ta-hVx">
+            <objects>
+                <collectionViewController id="kY0-w0-J3d" customClass="LatestArticlesCollectionViewController" customModule="BuzzfeedClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="d5Y-OD-Bk8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zj5-hJ-4xm">
+                            <size key="itemSize" width="160" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LatestArticleCell" id="19P-fz-R3M" customClass="LatestArticleCell" customModule="BuzzfeedClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uzi-SJ-3vW">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="109"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Uzi-SJ-3vW" firstAttribute="leading" secondItem="19P-fz-R3M" secondAttribute="leading" id="3Td-Qb-oFF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uzi-SJ-3vW" secondAttribute="trailing" id="3Yz-cc-YPc"/>
+                                    <constraint firstItem="Uzi-SJ-3vW" firstAttribute="top" secondItem="19P-fz-R3M" secondAttribute="top" id="5Z5-0Y-sq2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uzi-SJ-3vW" secondAttribute="bottom" constant="41" id="GNp-MO-yoe"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="latestArticleImage" destination="Uzi-SJ-3vW" id="cH3-4I-GgN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="kY0-w0-J3d" id="rai-YS-iaJ"/>
+                            <outlet property="delegate" destination="kY0-w0-J3d" id="lLp-AK-wdh"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Latest Articles" id="zia-rO-55h"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkX-8T-7qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.8" y="777.66116941529242"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Zbw-h3-tb8">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5Je-Fu-irs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="FTw-Tp-TTY">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="avQ-Rf-mUe" kind="relationship" relationship="viewControllers" id="0Cc-nK-Kss"/>
+                        <segue destination="kY0-w0-J3d" kind="relationship" relationship="viewControllers" id="WfH-ki-MuL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S42-lU-q6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269.60000000000002" y="445.72713643178412"/>
         </scene>
     </scenes>
 </document>
